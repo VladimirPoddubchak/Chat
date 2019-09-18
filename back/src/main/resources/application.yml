@@ -1,0 +1,20 @@
+server:
+  port: 8090
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      lob:
+        non_contextual_creation: true
+      temp:
+        use_jdbc_metadata_defaults: false
+      current_session_context_class: thread
+  datasource:
+    platform: org.hibernate.dialect.PostgreSQL95Dialect
+    url: jdbc:postgresql://127.0.0.1:5432/chat_db?currentSchema=chat
+    username: postgres
+    password: root
+    driverClassName: org.postgresql.Driver
